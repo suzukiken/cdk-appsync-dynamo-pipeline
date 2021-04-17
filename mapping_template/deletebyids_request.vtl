@@ -1,0 +1,15 @@
+#set( $ids = [] )
+
+#foreach( $item in $ctx.prev.result )
+    #set( $map = {} )
+    $util.qr( $map.put( "id", $util.dynamodb.toString($item.id) ) )
+    $util.qr( $ids.add($map) )
+#end
+
+{
+    "version" : "2018-05-29",
+    "operation" : "BatchDeleteItem",
+    "tables" : {
+        "cdkappsyncdynamopipelineProduct": $util.toJson($ids)
+    }
+}
