@@ -5,4 +5,4 @@ To deploy AppSync pipeline resolver and Dynamo DB Tables.
 * `npm install`
 * `cdk deploy`
 
-[description](https://figmentresearch.com/aws/cdkgluetable)
+[description](https://note.figmentresearch.com/aws/cdkgluetable)
